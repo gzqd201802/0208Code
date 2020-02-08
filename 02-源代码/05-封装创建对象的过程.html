@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 1. 简单改进：工厂函数
+        //      1. 准备一个函数并开发对应参数
+        //      2. 在函数内部创建对象
+        //      3. 通关传入的参数把数据添加到对象属性中
+        //      4. return 返回对象
+
+        function creatBook(name, price) {
+            // 创建一个新对象
+            const book = new Object();
+            // 给对象添加各种属性
+            book.name = name;
+            book.price = price;
+            // 返回函数内部创建的对象
+            return book;
+        }
+
+        const book1 = creatBook('JavaScript高程3', 98);
+        const book2 = creatBook('犀牛书', 198);
+
+        console.log('卖书',book1,book2);
+        
+
+
+        function createPerson (name, age) {
+            // 直接返回对象字面量
+            return {
+                // 属性
+                name: name,
+                age: age,
+                // 方法
+                sayName: function () {
+                    // this 谁调用就指向谁
+                    console.log(this.name);
+                }
+            }
+        }
+
+        const p1 = createPerson('Jack', 18);
+        const p2 = createPerson('Mike', 18);
+
+        console.log(p1);       // Jack
+        console.log(p2);       // Mike
+
+        p1.sayName();               // 'Jack'
+        
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //  1. 先创建一个函数
+        //  2. 在函数内部通过 this 给对象添加属性
+        //  3. 通过 new 关键词调用函数并传参
+
+        function Person(name,age){
+            this.name = name;
+            this.age = age;
+            this.sayHi = function(){
+                console.log(`自我介绍：${this.name}，今年${this.age}`);
+            }
+        }
+
+        // 有 new
+        const p1 = new Person('小黄',20);
+        // 无 new，运行函数的时候内部的 this 指向 window，错误的写法
+        const p2 = Person('小黄',20);
+
+        console.log(p1);    // Person {name: "小黄", age: 20, sayHi: ƒ}
+        console.log(p2);    // undefined，当做普通函数调用，没有设置返回值，所以是 undefined
+        
+
+        // new 在 JS 中主要用于创建对象的
+        // 而要创建 `Person` 实例，则必须使用 `new` 操作符。
+        // 以这种 new 方式调用构造函数会经历以下 4 个步骤：
+        //  1. 创建一个新对象
+        //  2. 将构造函数的作用域赋给新对象（因此 this 就指向了这个新对象）
+        //  3. 执行构造函数中的代码
+        //  4. 返回新对象
+
+
+
+    </script>
+</body>
+</html>

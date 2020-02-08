@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let num = 1;
+        let str = '名字';
+
+
+        // 1. new Object()  在内存的堆空间中创建了一个对象
+        // 2. 把对象的内存地址赋值给了 obj
+        let obj = new Object();
+
+        // 点语法就是通过引用关系访问对象数据或修改对象数据。
+        obj.name = '小明';
+        obj.age = 19;
+
+        // obj.name += '小米';
+
+        // obj.name = obj.name + '小米';
+
+
+        console.log(obj.name);      // "小明小米"
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>

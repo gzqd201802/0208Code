@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 1. 内置构造函数创建
+        const book = new Object();
+        // 通过点语法添加属性
+        // 对象.key = value;
+        book.author = 'xxx';
+        book.name = 'JavaScript高程3';
+        book.print = '人民邮电出版社';
+        book.price = 98;
+
+        console.log(book);
+
+        // 2. 对象字面量创建
+        //     对象 = { key:value, key2:value2 }
+        const book2 = {
+            author: 'xxx',
+            name:'JavaScript高程3',
+            print: '人民邮电出版社',
+            price: 98
+        };
+
+        console.log(book2);
+        
+        
+
+    </script>
+</body>
+</html>
