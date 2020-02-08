@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 创建一个函数，把函数的内存地址赋值给了 fn1
+        let fn1 = function(){
+            alert('函数被执行了');
+        }
+
+        // 函数本质是个对象
+        fn1.price = 98;
+
+
+        // 把fn1保存的内存地址再赋值给了 fn2
+        let fn2 = fn1;
+
+        fn1();
+        fn2();
+
+        // console.log(fn1 === fn2);       // true，内存地址一样
+
+        console.log(fn1.price);     // 98
+        console.log(fn2.price);     // 98
+        
+        
+
+    </script>
+</body>
+</html>
