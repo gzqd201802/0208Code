@@ -13,13 +13,16 @@
         //  3. 通过 new 关键词调用函数并传参
 
         function Person(name,age){
+            // new 调用构造函数的时候，this 指向 new 出来的新对象
             this.name = name;
             this.age = age;
             this.sayHi = function(){
                 console.log(`自我介绍：${this.name}，今年${this.age}`);
             }
+            // return this;         // new 调用构造函数的时候，自动 return 
         }
 
+        // p1 p2 实例对象
         const p1 = new Person('小明', 18);
         const p2 = new Person('小白', 19);
 

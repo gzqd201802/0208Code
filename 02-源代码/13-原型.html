@@ -24,7 +24,10 @@
             console.log(`自我介绍：${this.name}，今年${this.age}`);
         }
 
-        // 小缺陷：1. 占用变量命名   2. 和 Person 这类对象关联性不强
+        // 给原型添加方法
+        //  好处：
+        //      1. 不占用变量命名
+        //      2. 和 Person 这类对象关联性更强
         Person.prototype.run = function () {
             console.log(`${this.name}还可以跑`);
         }
